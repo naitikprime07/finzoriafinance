@@ -15,6 +15,10 @@ export const ADS_CONFIG = {
     // LIVE: "/23357075583/ca-pub-6444912182503724-tag/fflivegame_RBX_Display1"
     display: import.meta.env.VITE_GAM_DISPLAY,
 
+    // Second banner tag for pages with 2 banners (e.g. home bottom / middle).
+    // LIVE: "/23357075583/ca-pub-6444912182503724-tag/fflivegame_RBX_Display2"
+    display2: import.meta.env.VITE_GAM_DISPLAY2,
+
     // Full-screen ad shown on a link click: the visitor's first click, then again once 60s have passed.
     // LIVE: "/23357075583/ca-pub-6444912182503724-tag/fflivegame_RBX_Interstitial"
     interstitial: import.meta.env.VITE_GAM_INTERSTITIAL,
@@ -30,8 +34,8 @@ export const ADS_CONFIG = {
     // Optional: a separate banner ad unit for one place. Leave "" to use `display`.
     placements: {
         index: "",
-        home_top: "",
-        home_middle: "",
+        home_top: import.meta.env.VITE_GAM_DISPLAY,
+        home_middle: import.meta.env.VITE_GAM_DISPLAY2,
         quiz: "",
         spin_to_win: "",
         scratch_win: "",
